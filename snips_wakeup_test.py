@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import json
 import paho.mqtt.client as mqtt
 
 class UserData(object):
