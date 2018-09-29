@@ -15,7 +15,7 @@ def on_connect(client, userdata, flags, rc):
     topics = [("hermes/intent/#", 0), ("hermes/hotword/#", 0), ("hermes/asr/#", 0), ("hermes/nlu/#", 0), ("snipsmanager/#", 0)]
     client.subscribe(topics)
 
-    client.single('hermes/hotword/default/toggleOn', json.dumps({'siteId': 'default'}))
+    client.publish('hermes/hotword/default/toggleOn', json.dumps({'siteId': 'default'}))
 
 def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
