@@ -3,6 +3,7 @@
 sudo systemctl stop snips-audio-server
 sudo systemctl start snips-hotword
 sudo systemctl stop snips-dialogue
+sudo systemctl stop snips-asr
 
 snips-audio-server --nomike --hijack 0.0.0.0:1234 &
 
